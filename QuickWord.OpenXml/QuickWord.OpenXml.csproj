@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+	  <TargetFrameworks>netstandard2.0;net6.0</TargetFrameworks>
+	  <LangVersion>10.0</LangVersion>
+	  <Nullable>enable</Nullable>
+	  <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+	  <Title>QuickWord Extensions for DocumentFormat.OpenXml</Title>
+	  <Company>Kewin Kupilas</Company>
+	  <Description>A set of extension methods for DocumentFormat.OpenXml which simplifies creating and modifying Word documents (such as .docx).</Description>
+	  <PackageLicenseExpression> GPL-3.0-or-later</PackageLicenseExpression>
+	  <PackageProjectUrl>https://github.com/Nickelony/QuickWord.OpenXml</PackageProjectUrl>
+	  <RepositoryUrl>https://github.com/Nickelony/QuickWord.OpenXml</RepositoryUrl>
+	  <PackageTags>quick word office open xml docx simple easy</PackageTags>
+	  <Version>1.0.0</Version>
+	  <PackageIcon>Icon128x128.png</PackageIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\Icon\Icon128x128.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="DocumentFormat.OpenXml" Version="2.20.0" />
+    <PackageReference Include="System.Drawing.Common" Version="7.0.0" />
+  </ItemGroup>
+
+</Project>
