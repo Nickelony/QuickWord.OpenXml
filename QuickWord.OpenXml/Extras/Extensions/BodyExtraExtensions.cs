@@ -75,17 +75,17 @@ public static class BodyExtraExtensions
 
 	#region Page sizes
 
-	private const int A4_TWIPS_WIDTH = 11907;
-	private const int A4_TWIPS_HEIGHT = 16839;
+	private const int LETTER_TWIPS_WIDTH = 12240;
+	private const int LETTER_TWIPS_HEIGHT = 15840;
 
 	public static double PageWidthValue(this Body body, MeasuringUnits desiredUnits)
 	{
 		PageSize? pageSize = body.GetSectionProperties()?.GetFirstChild<PageSize>();
 
 		if (pageSize is null)
-			return Twips.ToOther(A4_TWIPS_WIDTH, desiredUnits);
+			return Twips.ToOther(LETTER_TWIPS_WIDTH, desiredUnits);
 
-		int value = (int?)pageSize.Width?.Value ?? A4_TWIPS_WIDTH;
+		int value = (int?)pageSize.Width?.Value ?? LETTER_TWIPS_WIDTH;
 		return Twips.ToOther(value, desiredUnits);
 	}
 
@@ -94,9 +94,9 @@ public static class BodyExtraExtensions
 		PageSize? pageSize = body.GetSectionProperties()?.GetFirstChild<PageSize>();
 
 		if (pageSize is null)
-			return Twips.ToOther(A4_TWIPS_HEIGHT, desiredUnits);
+			return Twips.ToOther(LETTER_TWIPS_HEIGHT, desiredUnits);
 
-		int value = (int?)pageSize.Height?.Value ?? A4_TWIPS_HEIGHT;
+		int value = (int?)pageSize.Height?.Value ?? LETTER_TWIPS_HEIGHT;
 		return Twips.ToOther(value, desiredUnits);
 	}
 
