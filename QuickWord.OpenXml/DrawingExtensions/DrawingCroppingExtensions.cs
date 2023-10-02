@@ -1,8 +1,8 @@
 ﻿// Ignore Spelling: Uncropped
 
 using DocumentFormat.OpenXml.Wordprocessing;
-using System;
 using QuickWord.OpenXml.Utilities;
+using System;
 using A = DocumentFormat.OpenXml.Drawing;
 
 namespace QuickWord.OpenXml.DrawingExtensions;

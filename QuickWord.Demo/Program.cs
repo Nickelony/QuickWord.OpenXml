@@ -1,12 +1,12 @@
 ﻿using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Wordprocessing;
-using System.Diagnostics;
 using QuickWord.OpenXml;
 using QuickWord.OpenXml.DrawingExtensions;
 using QuickWord.OpenXml.Extras;
 using QuickWord.OpenXml.Extras.Extensions;
 using QuickWord.OpenXml.QuickObjects;
+using System.Diagnostics;
 using DW = DocumentFormat.OpenXml.Drawing.Wordprocessing;
 
 // // // // // // // // // // // // // // // //

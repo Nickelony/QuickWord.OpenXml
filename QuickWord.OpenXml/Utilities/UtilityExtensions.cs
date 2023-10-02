@@ -1,6 +1,6 @@
 ﻿using DocumentFormat.OpenXml.Drawing;
-using System.Drawing;
 using QuickWord.OpenXml.DrawingExtensions;
+using System.Drawing;
 
 namespace QuickWord.OpenXml.Utilities;
 

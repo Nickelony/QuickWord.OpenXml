@@ -1,12 +1,12 @@
 ﻿using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Wordprocessing;
+using QuickWord.OpenXml.Measurements;
+using QuickWord.OpenXml.Utilities;
 using System;
 using System.Diagnostics.CodeAnalysis;
 using System.Drawing;
 using System.IO;
 using System.Linq;
-using QuickWord.OpenXml.Measurements;
-using QuickWord.OpenXml.Utilities;
 using A = DocumentFormat.OpenXml.Drawing;
 using DW = DocumentFormat.OpenXml.Drawing.Wordprocessing;
 

@@ -50,7 +50,7 @@ public class RunExtrasTests
 
 		Assert.AreEqual(
 			$"Text{Environment.NewLine}with{Environment.NewLine}line{Environment.NewLine}breaks",
-			run.Text());
+			run.GetText());
 
 		run.Text(null);
 		Assert.AreEqual(0, run.ChildElements.Count);

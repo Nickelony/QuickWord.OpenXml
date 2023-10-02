@@ -1,6 +1,6 @@
 ﻿using DocumentFormat.OpenXml.Wordprocessing;
-using System.Drawing;
 using QuickWord.OpenXml.Utilities;
+using System.Drawing;
 using A = DocumentFormat.OpenXml.Drawing;
 using PIC = DocumentFormat.OpenXml.Drawing.Pictures;
 

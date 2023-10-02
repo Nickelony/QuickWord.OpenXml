@@ -1,6 +1,6 @@
 ﻿using DocumentFormat.OpenXml.Wordprocessing;
-using System;
 using QuickWord.OpenXml.Measurements;
+using System;
 using DW = DocumentFormat.OpenXml.Drawing.Wordprocessing;
 
 namespace QuickWord.OpenXml.DrawingExtensions;

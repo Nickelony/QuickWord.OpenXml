@@ -1,9 +1,9 @@
 ﻿using DocumentFormat.OpenXml.Wordprocessing;
+using QuickWord.OpenXml.Measurements;
+using QuickWord.OpenXml.Utilities;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using QuickWord.OpenXml.Measurements;
-using QuickWord.OpenXml.Utilities;
 
 namespace QuickWord.OpenXml.Extras;
 
@@ -177,7 +177,7 @@ public static class ParagraphExtraExtensions
 	/// </summary>
 	public static Paragraph ApplyRunFormatting(this Paragraph paragraph, RunFormatting formatting, bool ignoreNulls = false)
 	{
-		paragraph.Descendants<Run>().ToList().ForEach(r => r.ApplyFormatting(formatting, ignoreNulls));
+		paragraph.Elements<Run>().ToList().ForEach(r => r.ApplyFormatting(formatting, ignoreNulls));
 		return paragraph;
 	}
 
@@ -199,7 +199,7 @@ public static class ParagraphExtraExtensions
 	/// </summary>
 	public static Paragraph ResetRunFormatting(this Paragraph paragraph)
 	{
-		paragraph.Descendants<Run>().ToList().ForEach(r => r.ResetFormatting());
+		paragraph.Elements<Run>().ToList().ForEach(r => r.ResetFormatting());
 		return paragraph;
 	}
 
@@ -214,8 +214,8 @@ public static class ParagraphExtraExtensions
 	{
 		var builder = new StringBuilder();
 
-		foreach (Run run in paragraph.Descendants<Run>())
-			builder.Append(run.Text());
+		foreach (Run run in paragraph.Elements<Run>())
+			builder.Append(run.GetText());
 
 		return builder.ToString();
 	}

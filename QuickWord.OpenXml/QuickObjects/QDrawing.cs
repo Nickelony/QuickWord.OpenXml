@@ -1,8 +1,8 @@
 ﻿using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Wordprocessing;
+using QuickWord.OpenXml.DrawingExtensions;
 using System;
 using System.Linq;
-using QuickWord.OpenXml.DrawingExtensions;
 
 namespace QuickWord.OpenXml.QuickObjects;
 

@@ -1,10 +1,10 @@
 ﻿using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Wordprocessing;
+using QuickWord.OpenXml.Measurements;
+using QuickWord.OpenXml.Utilities;
 using System;
 using System.Linq;
 using System.Text;
-using QuickWord.OpenXml.Measurements;
-using QuickWord.OpenXml.Utilities;
 
 namespace QuickWord.OpenXml.Extras;
 
@@ -199,7 +199,7 @@ public static class RunExtraExtensions
 	/// <summary>
 	/// Gets the text of the run, while converting each <see cref="Break" /> into a <c><see cref="Environment.NewLine"/></c>.
 	/// </summary>
-	public static string Text(this Run run)
+	public static string GetText(this Run run)
 	{
 		var builder = new StringBuilder();
 

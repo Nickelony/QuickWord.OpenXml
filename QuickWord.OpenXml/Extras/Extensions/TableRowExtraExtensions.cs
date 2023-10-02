@@ -1,8 +1,8 @@
 ﻿using DocumentFormat.OpenXml.Wordprocessing;
-using System.Collections.Generic;
-using System.Linq;
 using QuickWord.OpenXml.Measurements;
 using QuickWord.OpenXml.Utilities;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace QuickWord.OpenXml.Extras;
 

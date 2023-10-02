@@ -1,11 +1,19 @@
 ﻿using DocumentFormat.OpenXml.Wordprocessing;
 using QuickWord.OpenXml.Measurements;
 using QuickWord.OpenXml.Utilities;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace QuickWord.OpenXml.Extras.Extensions;
 
 public static class BodyExtraExtensions
 {
+	public static IEnumerable<Paragraph> Paragraphs(this Body body)
+		=> body.Elements<Paragraph>();
+
+	public static Paragraph? Paragraphs(this Body body, int index)
+		=> body.Elements<Paragraph>().ElementAtOrDefault(index);
+
 	#region Margins
 
 	public static double? LeftMarginValue(this Body body, MeasuringUnits desiredUnits)
