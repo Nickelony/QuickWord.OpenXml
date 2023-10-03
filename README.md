@@ -2,6 +2,28 @@
 A set of extension methods for `DocumentFormat.OpenXml` which simplifies creating and modifying Word documents (such as .docx).
 You can use these methods with your existing `DocumentFormat.OpenXml` code without having to change anything.
 
+# Getting Started
+Example document creation with 1 formatted paragraph:
+```cs
+string fileName = "TEST.docx";
+
+using (var document = WordprocessingDocument.Create(fileName, WordprocessingDocumentType.Document))
+{
+	Body body = document.CreateBody()
+	  .PageWidth(21, MeasuringUnits.Centimeters) // A4 width
+	  .PageHeight(29.7, MeasuringUnits.Centimeters); // A4 height
+
+	body.AppendChild(new Paragraph(
+		new Run().Text("This is a single, centered paragraph.")
+		  .FontSize(16)
+		  .FontColor("Red") // #FF0000 will also work
+		  .FontFace("Times New Roman"))
+		.Justification(JustificationValues.Center));
+
+	document.Save();
+}
+```
+
 # Highlighted Features
 - Super quick and easy Builder-like pattern:
 ```cs
