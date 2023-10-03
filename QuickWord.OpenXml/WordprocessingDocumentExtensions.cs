@@ -5,6 +5,9 @@ using DocumentFormat.OpenXml.Wordprocessing;
 
 namespace QuickWord.OpenXml;
 
+/// <summary>
+/// A set of extension methods for the <see cref="WordprocessingDocument" /> class.
+/// </summary>
 public static class WordprocessingDocumentExtensions
 {
 	/// <summary>

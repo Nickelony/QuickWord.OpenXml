@@ -64,7 +64,7 @@ body.AppendChild(new Paragraph(runs)
 // Simple hard-coded table example
 // // // // // // // // // // // // // // // //
 
-StartSection("Simple table with hard-coded data");
+CreateHeading("Simple table with hard-coded data");
 
 body.AppendChild(QTable.Create(new[]
 {
@@ -80,7 +80,7 @@ body.AppendChild(QTable.Create(new[]
 // Simple hard-coded table with cell merging
 // // // // // // // // // // // // // // // //
 
-StartSection("Simple table with merged cells");
+CreateHeading("Simple table with merged cells");
 
 Table table = QTable.Create(new[]
 {
@@ -129,7 +129,7 @@ Person[] exampleData = new[]
 	new Person(4, "Jane", "Smith", true)
 };
 
-StartSection("Table with passed array data");
+CreateHeading("Table with passed array data");
 
 Table table1 = new Table()
 	.Width(100, WidthUnits.Percentage)
@@ -152,7 +152,7 @@ body.AppendChild(table1);
 // Table with formatting
 // // // // // // // // // // // // // // // //
 
-StartSection("Table with passed array data and custom formatting");
+CreateHeading("Table with passed array data and custom formatting");
 body.AppendChild(QParagraph.Create("(The table header repeats on each new page)",
 	new ParagraphFormatting { Justification = JustificationValues.Center },
 	new RunFormatting { FontSize = 9 }));
@@ -216,7 +216,7 @@ body.AppendChild(table2);
 // Inlined image
 // // // // // // // // // // // // // // // //
 
-StartSection("Inlined image");
+CreateHeading("Inlined image");
 body.AppendChild(new Paragraph(
 	new Run(QDrawing.FromImage(body, "Icon.png", ImagePartType.Png, 32, 32)),
 	new Run().Text(" This image is inlined with the text.").VerticalPosition(8)
@@ -226,7 +226,7 @@ body.AppendChild(new Paragraph(
 // Anchored images
 // // // // // // // // // // // // // // // //
 
-StartSection("Anchored images");
+CreateHeading("Anchored images");
 body.AppendChild(new EmptyLine().SpacingBefore(0, LineMeasuringUnits.Points).SpacingAfter(0, LineMeasuringUnits.Points));
 
 body.AppendChild(new Paragraph(
@@ -321,7 +321,7 @@ Process.Start(process);
 // Helping methods
 // // // // // // // // // // // // // // // //
 
-void StartSection(string text, bool lineBreakBefore = true)
+void CreateHeading(string text, bool lineBreakBefore = true)
 {
 	if (lineBreakBefore)
 		body.AppendChild(new EmptyLine());

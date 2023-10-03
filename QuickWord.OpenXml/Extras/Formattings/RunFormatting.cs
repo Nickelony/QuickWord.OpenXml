@@ -1,6 +1,7 @@
 ﻿// Ignore Spelling: Strikethrough
 
 using DocumentFormat.OpenXml.Wordprocessing;
+using QuickWord.OpenXml.Measurements;
 
 namespace QuickWord.OpenXml.Extras;
 
@@ -45,4 +46,75 @@ public class RunFormatting
 	public VerticalPositionValues? VerticalAlignment { get; set; }
 	public long? CharacterScale { get; set; }
 	public bool? WebHidden { get; set; }
+
+	// Extras:
+
+	public string? FillColor
+	{
+		get => Shading?.Fill;
+		set
+		{
+			Shading ??= new Shading();
+			Shading.Fill = value;
+		}
+	}
+
+	public string? FontColor
+	{
+		get => Color?.Val;
+		set
+		{
+			Color ??= new Color();
+			Color.Val = value;
+		}
+	}
+
+	public string? FontFace
+	{
+		get => Fonts?.Ascii;
+		set
+		{
+			Fonts ??= new RunFonts();
+			Fonts.Ascii = value;
+		}
+	}
+
+	public string? Language
+	{
+		get => Languages?.Val;
+		set
+		{
+			Languages ??= new Languages();
+			Languages.Val = value;
+		}
+	}
+
+	public QBorder QBorder
+	{
+		set => Border = new Border
+		{
+			Val = value.Border,
+			Size = BorderSize.ToSixth(value.Width),
+			Color = value.Color,
+			Space = value.Spacing
+		};
+	}
+
+	public QManualWidth QManualWidth
+	{
+		set
+		{
+			FitText ??= new FitText();
+			FitText.Val = (uint)Twips.FromOther(value.Width, value.Units);
+		}
+	}
+
+	public QUnderline QUnderline
+	{
+		set => Underline = new Underline
+		{
+			Val = value.Style,
+			Color = value.Color
+		};
+	}
 }

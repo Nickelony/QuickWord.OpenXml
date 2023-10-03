@@ -12,8 +12,9 @@
 	  <PackageProjectUrl>https://github.com/Nickelony/QuickWord.OpenXml</PackageProjectUrl>
 	  <RepositoryUrl>https://github.com/Nickelony/QuickWord.OpenXml</RepositoryUrl>
 	  <PackageTags>quick word office open xml docx simple easy</PackageTags>
-	  <Version>1.0.1</Version>
+	  <Version>1.0.2</Version>
 	  <PackageIcon>Icon128x128.png</PackageIcon>
+	  <GenerateDocumentationFile>True</GenerateDocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>

@@ -3,6 +3,9 @@ using System;
 
 namespace QuickWord.OpenXml.Extras;
 
+/// <summary>
+/// A set of extension methods for the <see cref="TableIndentation"/> class.
+/// </summary>
 public static class TableIndentationExtensions
 {
 	public static double GetExactWidth(this TableIndentation tableIndentation, out WidthUnits? units)

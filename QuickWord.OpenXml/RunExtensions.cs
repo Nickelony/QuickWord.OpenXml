@@ -4,6 +4,9 @@ using QuickWord.OpenXml.Utilities;
 
 namespace QuickWord.OpenXml;
 
+/// <summary>
+/// A set of extension methods for the <see cref="Run" /> class.
+/// </summary>
 public static class RunExtensions
 {
 	#region Get property methods
@@ -11,6 +14,7 @@ public static class RunExtensions
 	/// <summary>
 	/// Specifies whether the bold property shall be applied to all non-complex
 	/// script characters in the contents of this run when displayed in a document.
+	/// <para>Returns <see langword="null" /> if the property node doesn't exist.</para>
 	/// <para><see href="https://learn.microsoft.com/en-us/dotnet/api/DocumentFormat.OpenXml.Wordprocessing.Bold" /></para>
 	/// </summary>
 	public static bool? BoldValue(this Run run)
@@ -19,6 +23,7 @@ public static class RunExtensions
 	/// <summary>
 	/// Specifies whether the bold property shall be applied to all complex
 	/// script characters in the contents of this run when displayed in a document.
+	/// <para>Returns <see langword="null" /> if the property node doesn't exist.</para>
 	/// <para><see href="https://learn.microsoft.com/en-us/dotnet/api/DocumentFormat.OpenXml.Wordprocessing.BoldComplexScript" /></para>
 	/// </summary>
 	public static bool? BoldComplexScriptValue(this Run run)
@@ -26,6 +31,7 @@ public static class RunExtensions
 
 	/// <summary>
 	/// Specifies information about the border applied to the text in the current run.
+	/// <para>Returns <see langword="null" /> if the property node doesn't exist.</para>
 	/// <para><see href="https://learn.microsoft.com/en-us/dotnet/api/DocumentFormat.OpenXml.Wordprocessing.Border" /></para>
 	/// </summary>
 	public static Border? GetBorder(this Run run)
@@ -34,6 +40,7 @@ public static class RunExtensions
 	/// <summary>
 	/// Specifies that any lowercase characters in this text run shall
 	/// be formatted for display only as their capital letter character equivalents.
+	/// <para>Returns <see langword="null" /> if the property node doesn't exist.</para>
 	/// <para><see href="https://learn.microsoft.com/en-us/dotnet/api/DocumentFormat.OpenXml.Wordprocessing.Caps" /></para>
 	/// </summary>
 	public static bool? AllCapsValue(this Run run)
@@ -42,6 +49,7 @@ public static class RunExtensions
 	/// <summary>
 	/// Specifies the color which shall be used to display
 	/// the contents of this run in the document.
+	/// <para>Returns <see langword="null" /> if the property node doesn't exist.</para>
 	/// <para><see href="https://learn.microsoft.com/en-us/dotnet/api/DocumentFormat.OpenXml.Wordprocessing.Color" /></para>
 	/// </summary>
 	public static Color? GetColor(this Run run)
@@ -51,6 +59,7 @@ public static class RunExtensions
 	/// Specifies whether the contents of this run shall be treated
 	/// as complex script text regardless of their Unicode character values when
 	/// determining the formatting for this run.
+	/// <para>Returns <see langword="null" /> if the property node doesn't exist.</para>
 	/// <para><see href="https://learn.microsoft.com/en-us/dotnet/api/DocumentFormat.OpenXml.Wordprocessing.ComplexScript" /></para>
 	/// </summary>
 	public static bool? ComplexScriptValue(this Run run)
@@ -59,6 +68,7 @@ public static class RunExtensions
 	/// <summary>
 	/// Specifies that the contents of this run shall be displayed with
 	/// two horizontal lines through each character displayed on the line.
+	/// <para>Returns <see langword="null" /> if the property node doesn't exist.</para>
 	/// <para><see href="https://learn.microsoft.com/en-us/dotnet/api/DocumentFormat.OpenXml.Wordprocessing.DoubleStrike" /></para>
 	/// </summary>
 	public static bool? DoubleStrikeValue(this Run run)
@@ -75,6 +85,7 @@ public static class RunExtensions
 	/// <summary>
 	/// Specifies an animated text effect which should be displayed when
 	/// rendering the contents of this run.
+	/// <para>Returns <see langword="null" /> if the property node doesn't exist.</para>
 	/// <para><see href="https://learn.microsoft.com/en-us/dotnet/api/DocumentFormat.OpenXml.Wordprocessing.TextEffect" /></para>
 	/// </summary>
 	public static TextEffectValues? TextEffectValue(this Run run)
@@ -83,6 +94,7 @@ public static class RunExtensions
 	/// <summary>
 	/// Specifies the emphasis mark which shall be displayed for each
 	/// non-space character in this run.
+	/// <para>Returns <see langword="null" /> if the property node doesn't exist.</para>
 	/// <para><see href="https://learn.microsoft.com/en-us/dotnet/api/DocumentFormat.OpenXml.Wordprocessing.Emphasis" /></para>
 	/// </summary>
 	public static EmphasisMarkValues? EmphasisMarkValue(this Run run)
@@ -91,6 +103,7 @@ public static class RunExtensions
 	/// <summary>
 	/// Specifies that the contents of this run should be displayed as if embossed,
 	/// which makes text appear as if it is raised off the page in relief.
+	/// <para>Returns <see langword="null" /> if the property node doesn't exist.</para>
 	/// <para><see href="https://learn.microsoft.com/en-us/dotnet/api/DocumentFormat.OpenXml.Wordprocessing.Emboss" /></para>
 	/// </summary>
 	public static bool? EmbossValue(this Run run)
@@ -100,6 +113,7 @@ public static class RunExtensions
 	/// Specifies that the contents of this run shall not be automatically displayed based
 	/// on the width of its contents, rather its contents shall be resized
 	/// to fit the width specified.
+	/// <para>Returns <see langword="null" /> if the property node doesn't exist.</para>
 	/// <para><see href="https://learn.microsoft.com/en-us/dotnet/api/DocumentFormat.OpenXml.Wordprocessing.FitText" /></para>
 	/// </summary>
 	public static FitText? GetFitText(this Run run)
@@ -108,6 +122,7 @@ public static class RunExtensions
 	/// <summary>
 	/// Specifies a highlighting color which is applied as
 	/// a background behind the contents of this run.
+	/// <para>Returns <see langword="null" /> if the property node doesn't exist.</para>
 	/// <para><see href="https://learn.microsoft.com/en-us/dotnet/api/DocumentFormat.OpenXml.Wordprocessing.Highlight" /></para>
 	/// </summary>
 	public static HighlightColorValues? HighlightColorValue(this Run run)
@@ -116,6 +131,7 @@ public static class RunExtensions
 	/// <summary>
 	/// Specifies whether the italic property should be applied to all non-complex
 	/// script characters in the contents of this run when displayed in a document.
+	/// <para>Returns <see langword="null" /> if the property node doesn't exist.</para>
 	/// <para><see href="https://learn.microsoft.com/en-us/dotnet/api/DocumentFormat.OpenXml.Wordprocessing.Italic" /></para>
 	/// </summary>
 	public static bool? ItalicValue(this Run run)
@@ -124,6 +140,7 @@ public static class RunExtensions
 	/// <summary>
 	/// Specifies whether the italic property should be applied to all complex
 	/// script characters in the contents of this run when displayed in a document.
+	/// <para>Returns <see langword="null" /> if the property node doesn't exist.</para>
 	/// <para><see href="https://learn.microsoft.com/en-us/dotnet/api/DocumentFormat.OpenXml.Wordprocessing.ItalicComplexScript" /></para>
 	/// </summary>
 	public static bool? ItalicComplexScriptValue(this Run run)
@@ -133,6 +150,7 @@ public static class RunExtensions
 	/// Specifies that the contents of this run should be displayed as if imprinted,
 	/// which makes text appear to be imprinted or pressed into page
 	/// (also referred to as 'engrave').
+	/// <para>Returns <see langword="null" /> if the property node doesn't exist.</para>
 	/// <para><see href="https://learn.microsoft.com/en-us/dotnet/api/DocumentFormat.OpenXml.Wordprocessing.Imprint" /></para>
 	/// </summary>
 	public static bool? ImprintValue(this Run run)
@@ -140,6 +158,7 @@ public static class RunExtensions
 
 	/// <summary>
 	/// Specifies whether font kerning shall be applied to the contents of this run.
+	/// <para>Returns <see langword="null" /> if the property node doesn't exist.</para>
 	/// <para><see href="https://learn.microsoft.com/en-us/dotnet/api/DocumentFormat.OpenXml.Wordprocessing.Kern" /></para>
 	/// </summary>
 	public static double? KerningValue(this Run run, TextMeasuringUnits desiredUnits = TextMeasuringUnits.Points)
@@ -151,6 +170,7 @@ public static class RunExtensions
 	/// <summary>
 	/// Specifies the languages which shall be used to check
 	/// spelling and grammar (if requested) when processing the contents of this run.
+	/// <para>Returns <see langword="null" /> if the property node doesn't exist.</para>
 	/// <para><see href="https://learn.microsoft.com/en-us/dotnet/api/DocumentFormat.OpenXml.Wordprocessing.Languages" /></para>
 	/// </summary>
 	public static Languages? GetLanguages(this Run run)
@@ -159,6 +179,7 @@ public static class RunExtensions
 	/// <summary>
 	/// Specifies that the contents of this run shall not report
 	/// any errors when the document is scanned for spelling and grammar.
+	/// <para>Returns <see langword="null" /> if the property node doesn't exist.</para>
 	/// <para><see href="https://learn.microsoft.com/en-us/dotnet/api/DocumentFormat.OpenXml.Wordprocessing.NoProof" /></para>
 	/// </summary>
 	public static bool? NoProofingValue(this Run run)
@@ -167,6 +188,7 @@ public static class RunExtensions
 	/// <summary>
 	/// Specifies that this run contains WordprocessingML which shall
 	/// be handled as though it was Office Open XML Math.
+	/// <para>Returns <see langword="null" /> if the property node doesn't exist.</para>
 	/// <para><see href="https://learn.microsoft.com/en-us/dotnet/api/DocumentFormat.OpenXml.Wordprocessing.OfficeMath" /></para>
 	/// </summary>
 	public static bool? OfficeMathValue(this Run run)
@@ -176,6 +198,7 @@ public static class RunExtensions
 	/// Specifies that the contents of this run should be displayed as if they have
 	/// an outline, by drawing a one pixel wide border around the inside and outside
 	/// borders of each character glyph in the run.
+	/// <para>Returns <see langword="null" /> if the property node doesn't exist.</para>
 	/// <para><see href="https://learn.microsoft.com/en-us/dotnet/api/DocumentFormat.OpenXml.Wordprocessing.Outline" /></para>
 	/// </summary>
 	public static bool? OutlineValue(this Run run)
@@ -184,6 +207,7 @@ public static class RunExtensions
 	/// <summary>
 	/// Specifies the amount by which text shall be raised or lowered for this run in relation
 	/// to the default baseline of the surrounding non-positioned text.
+	/// <para>Returns <see langword="null" /> if the property node doesn't exist.</para>
 	/// <para><see href="https://learn.microsoft.com/en-us/dotnet/api/DocumentFormat.OpenXml.Wordprocessing.Position" /></para>
 	/// </summary>
 	public static double? VerticalPositionValue(this Run run, TextMeasuringUnits desiredUnits = TextMeasuringUnits.Points)
@@ -194,6 +218,7 @@ public static class RunExtensions
 
 	/// <summary>
 	/// Specifies the fonts which shall be used to display the text contents of this run.
+	/// <para>Returns <see langword="null" /> if the property node doesn't exist.</para>
 	/// <para><see href="https://learn.microsoft.com/en-us/dotnet/api/DocumentFormat.OpenXml.Wordprocessing.RunFonts" /></para>
 	/// </summary>
 	public static RunFonts? GetFonts(this Run run)
@@ -202,6 +227,7 @@ public static class RunExtensions
 	/// <summary>
 	/// Specifies the style ID of the character style which shall be used to
 	/// format the contents of this paragraph.
+	/// <para>Returns <see langword="null" /> if the property node doesn't exist.</para>
 	/// <para><see href="https://learn.microsoft.com/en-us/dotnet/api/DocumentFormat.OpenXml.Wordprocessing.RunStyle" /></para>
 	/// </summary>
 	public static string? StyleValue(this Run run)
@@ -209,6 +235,7 @@ public static class RunExtensions
 
 	/// <summary>
 	/// Specifies whether the contents of this run shall have right-to-left characteristics.
+	/// <para>Returns <see langword="null" /> if the property node doesn't exist.</para>
 	/// <para><see href="https://learn.microsoft.com/en-us/dotnet/api/DocumentFormat.OpenXml.Wordprocessing.RightToLeftText" /></para>
 	/// </summary>
 	public static bool? RightToLeftValue(this Run run)
@@ -217,6 +244,7 @@ public static class RunExtensions
 	/// <summary>
 	/// Specifies that the contents of this run shall be displayed as if
 	/// each character has a shadow.
+	/// <para>Returns <see langword="null" /> if the property node doesn't exist.</para>
 	/// <para><see href="https://learn.microsoft.com/en-us/dotnet/api/DocumentFormat.OpenXml.Wordprocessing.Shadow" /></para>
 	/// </summary>
 	public static bool? ShadowValue(this Run run)
@@ -224,6 +252,7 @@ public static class RunExtensions
 
 	/// <summary>
 	/// Specifies the shading applied to the contents of the run.
+	/// <para>Returns <see langword="null" /> if the property node doesn't exist.</para>
 	/// <para><see href="https://learn.microsoft.com/en-us/dotnet/api/DocumentFormat.OpenXml.Wordprocessing.Shading" /></para>
 	/// </summary>
 	public static Shading? GetShading(this Run run)
@@ -233,6 +262,7 @@ public static class RunExtensions
 	/// Specifies that all small letter characters in this text run shall be formatted for display only
 	/// as their capital letter character equivalents in a font size two points smaller than the actual
 	/// font size specified for this text.
+	/// <para>Returns <see langword="null" /> if the property node doesn't exist.</para>
 	/// <para><see href="https://learn.microsoft.com/en-us/dotnet/api/DocumentFormat.OpenXml.Wordprocessing.SmallCaps" /></para>
 	/// </summary>
 	public static bool? SmallCapsValue(this Run run)
@@ -242,6 +272,7 @@ public static class RunExtensions
 	/// Specifies whether the current paragraph should use the document grid lines per
 	/// page settings defined in the docGrid element (§17.6.5) when laying out
 	/// the contents in the paragraph.
+	/// <para>Returns <see langword="null" /> if the property node doesn't exist.</para>
 	/// <para><see href="https://learn.microsoft.com/en-us/dotnet/api/DocumentFormat.OpenXml.Wordprocessing.SnapToGrid" /></para>
 	/// </summary>
 	public static bool? SnapToGridValue(this Run run)
@@ -250,6 +281,7 @@ public static class RunExtensions
 	/// <summary>
 	/// Specifies the amount of character pitch which shall be added or removed after
 	/// each character in this run before the following character is rendered in the document.
+	/// <para>Returns <see langword="null" /> if the property node doesn't exist.</para>
 	/// <para><see href="https://learn.microsoft.com/en-us/dotnet/api/DocumentFormat.OpenXml.Wordprocessing.Spacing" /></para>
 	/// </summary>
 	public static double? CharacterSpacingValue(this Run run, MeasuringUnits desiredUnits = MeasuringUnits.Points)
@@ -261,6 +293,7 @@ public static class RunExtensions
 	/// <summary>
 	/// Specifies that the given run shall always behave as if it is hidden,
 	/// even when hidden text is being displayed in the current document.
+	/// <para>Returns <see langword="null" /> if the property node doesn't exist.</para>
 	/// <para><see href="https://learn.microsoft.com/en-us/dotnet/api/DocumentFormat.OpenXml.Wordprocessing.SpecVanish" /></para>
 	/// </summary>
 	public static bool? SpecVanishValue(this Run run)
@@ -269,6 +302,7 @@ public static class RunExtensions
 	/// <summary>
 	/// Specifies that the contents of this run shall be displayed
 	/// with a single horizontal line through the center of the line.
+	/// <para>Returns <see langword="null" /> if the property node doesn't exist.</para>
 	/// <para><see href="https://learn.microsoft.com/en-us/dotnet/api/DocumentFormat.OpenXml.Wordprocessing.Strike" /></para>
 	/// </summary>
 	public static bool? StrikeValue(this Run run)
@@ -277,6 +311,7 @@ public static class RunExtensions
 	/// <summary>
 	/// Specifies the font size which shall be applied to all non complex
 	/// script characters in the contents of this run when displayed.
+	/// <para>Returns <see langword="null" /> if the property node doesn't exist.</para>
 	/// <para><see href="https://learn.microsoft.com/en-us/dotnet/api/DocumentFormat.OpenXml.Wordprocessing.FontSize" /></para>
 	/// </summary>
 	public static double? FontSizeValue(this Run run, TextMeasuringUnits desiredUnits = TextMeasuringUnits.Points)
@@ -288,6 +323,7 @@ public static class RunExtensions
 	/// <summary>
 	/// Specifies the font size which shall be applied to all complex
 	/// script characters in the contents of this run when displayed.
+	/// <para>Returns <see langword="null" /> if the property node doesn't exist.</para>
 	/// <para><see href="https://learn.microsoft.com/en-us/dotnet/api/DocumentFormat.OpenXml.Wordprocessing.FontSizeComplexScript" /></para>
 	/// </summary>
 	public static double? ComplexScriptFontSizeValue(this Run run, TextMeasuringUnits desiredUnits = TextMeasuringUnits.Points)
@@ -300,6 +336,7 @@ public static class RunExtensions
 	/// Specifies that the contents of this run should be displayed along with
 	/// an underline appearing directly below the character height
 	/// (less all spacing above and below the characters on the line).
+	/// <para>Returns <see langword="null" /> if the property node doesn't exist.</para>
 	/// <para><see href="https://learn.microsoft.com/en-us/dotnet/api/DocumentFormat.OpenXml.Wordprocessing.Underline" /></para>
 	/// </summary>
 	public static Underline? GetUnderline(this Run run)
@@ -308,6 +345,7 @@ public static class RunExtensions
 	/// <summary>
 	/// Specifies whether the contents of this run shall be hidden from
 	/// display at display time in a document.
+	/// <para>Returns <see langword="null" /> if the property node doesn't exist.</para>
 	/// <para><see href="https://learn.microsoft.com/en-us/dotnet/api/DocumentFormat.OpenXml.Wordprocessing.Vanish" /></para>
 	/// </summary>
 	public static bool? HiddenValue(this Run run)
@@ -316,6 +354,7 @@ public static class RunExtensions
 	/// <summary>
 	/// Specifies the alignment which shall be applied to the contents of this run in relation
 	/// to the default appearance of the run's text.
+	/// <para>Returns <see langword="null" /> if the property node doesn't exist.</para>
 	/// <para><see href="https://learn.microsoft.com/en-us/dotnet/api/DocumentFormat.OpenXml.Wordprocessing.VerticalTextAlignment" /></para>
 	/// </summary>
 	public static VerticalPositionValues? VerticalAlignmentValue(this Run run)
@@ -323,6 +362,7 @@ public static class RunExtensions
 
 	/// <summary>
 	/// Specifies the amount by which each character shall be stretched or compressed.
+	/// <para>Returns <see langword="null" /> if the property node doesn't exist.</para>
 	/// <para><see href="https://learn.microsoft.com/en-us/dotnet/api/DocumentFormat.OpenXml.Wordprocessing.CharacterScale" /></para>
 	/// </summary>
 	public static long? CharacterScaleValue(this Run run)
@@ -332,6 +372,7 @@ public static class RunExtensions
 	/// Specifies whether the contents of this run shall be hidden from
 	/// display at display time in a document when the document is being
 	/// displayed in a web page view.
+	/// <para>Returns <see langword="null" /> if the property node doesn't exist.</para>
 	/// <para><see href="https://learn.microsoft.com/en-us/dotnet/api/DocumentFormat.OpenXml.Wordprocessing.WebHidden" /></para>
 	/// </summary>
 	public static bool? WebHiddenValue(this Run run)
@@ -341,119 +382,204 @@ public static class RunExtensions
 
 	#region Set property methods
 
-	/// <inheritdoc cref="BoldValue" />
+	/// <summary>
+	/// Specifies whether the bold property shall be applied to all non-complex
+	/// script characters in the contents of this run when displayed in a document.
+	/// <para>Setting this to <see langword="null" /> will remove the property node from the document.</para>
+	/// <para><see href="https://learn.microsoft.com/en-us/dotnet/api/DocumentFormat.OpenXml.Wordprocessing.Bold" /></para>
+	/// </summary>
 	public static Run Bold(this Run run, bool? value = true)
 	{
 		run.GetOrInit<RunProperties>().SetValOrRemove<Bold>(value);
 		return run;
 	}
 
-	/// <inheritdoc cref="BoldComplexScriptValue" />
+	/// <summary>
+	/// Specifies whether the bold property shall be applied to all complex
+	/// script characters in the contents of this run when displayed in a document.
+	/// <para>Setting this to <see langword="null" /> will remove the property node from the document.</para>
+	/// <para><see href="https://learn.microsoft.com/en-us/dotnet/api/DocumentFormat.OpenXml.Wordprocessing.BoldComplexScript" /></para>
+	/// </summary>
 	public static Run BoldComplexScript(this Run run, bool? value = true)
 	{
 		run.GetOrInit<RunProperties>().SetValOrRemove<BoldComplexScript>(value);
 		return run;
 	}
 
-	/// <inheritdoc cref="GetBorder" />
+	/// <summary>
+	/// Specifies information about the border applied to the text in the current run.
+	/// <para>Setting this to <see langword="null" /> will remove the property node from the document.</para>
+	/// <para><see href="https://learn.microsoft.com/en-us/dotnet/api/DocumentFormat.OpenXml.Wordprocessing.Border" /></para>
+	/// </summary>
 	public static Run Border(this Run run, Border? border)
 	{
 		run.GetOrInit<RunProperties>().SetPropertyClassOrRemove(border);
 		return run;
 	}
 
-	/// <inheritdoc cref="AllCapsValue" />
+	/// <summary>
+	/// Specifies that any lowercase characters in this text run shall
+	/// be formatted for display only as their capital letter character equivalents.
+	/// <para>Setting this to <see langword="null" /> will remove the property node from the document.</para>
+	/// <para><see href="https://learn.microsoft.com/en-us/dotnet/api/DocumentFormat.OpenXml.Wordprocessing.Caps" /></para>
+	/// </summary>
 	public static Run AllCaps(this Run run, bool? value = true)
 	{
 		run.GetOrInit<RunProperties>().SetValOrRemove<Caps>(value);
 		return run;
 	}
 
-	/// <inheritdoc cref="GetColor" />
+	/// <summary>
+	/// Specifies the color which shall be used to display
+	/// the contents of this run in the document.
+	/// <para>Setting this to <see langword="null" /> will remove the property node from the document.</para>
+	/// <para><see href="https://learn.microsoft.com/en-us/dotnet/api/DocumentFormat.OpenXml.Wordprocessing.Color" /></para>
+	/// </summary>
 	public static Run Color(this Run run, Color? color)
 	{
 		run.GetOrInit<RunProperties>().SetPropertyClassOrRemove(color);
 		return run;
 	}
 
-	/// <inheritdoc cref="ComplexScriptValue" />
+	/// <summary>
+	/// Specifies whether the contents of this run shall be treated
+	/// as complex script text regardless of their Unicode character values when
+	/// determining the formatting for this run.
+	/// <para>Setting this to <see langword="null" /> will remove the property node from the document.</para>
+	/// <para><see href="https://learn.microsoft.com/en-us/dotnet/api/DocumentFormat.OpenXml.Wordprocessing.ComplexScript" /></para>
+	/// </summary>
 	public static Run ComplexScript(this Run run, bool? value = true)
 	{
 		run.GetOrInit<RunProperties>().SetValOrRemove<ComplexScript>(value);
 		return run;
 	}
 
-	/// <inheritdoc cref="DoubleStrikeValue" />
+	/// <summary>
+	/// Specifies that the contents of this run shall be displayed with
+	/// two horizontal lines through each character displayed on the line.
+	/// <para>Setting this to <see langword="null" /> will remove the property node from the document.</para>
+	/// <para><see href="https://learn.microsoft.com/en-us/dotnet/api/DocumentFormat.OpenXml.Wordprocessing.DoubleStrike" /></para>
+	/// </summary>
 	public static Run DoubleStrike(this Run run, bool? value = true)
 	{
 		run.GetOrInit<RunProperties>().SetValOrRemove<DoubleStrike>(value);
 		return run;
 	}
 
-	/// <inheritdoc cref="GetEastAsianLayout" />
+	/// <summary>
+	/// Specifies any East Asian typography settings which shall
+	/// be applied to the contents of the run.
+	/// <para><see href="https://learn.microsoft.com/en-us/dotnet/api/DocumentFormat.OpenXml.Wordprocessing.EastAsianLayout" /></para>
+	/// </summary>
 	public static Run EastAsianLayout(this Run run, EastAsianLayout? layout)
 	{
 		run.GetOrInit<RunProperties>().SetPropertyClassOrRemove(layout);
 		return run;
 	}
 
-	/// <inheritdoc cref="TextEffectValue" />
+	/// <summary>
+	/// Specifies an animated text effect which should be displayed when
+	/// rendering the contents of this run.
+	/// <para>Setting this to <see langword="null" /> will remove the property node from the document.</para>
+	/// <para><see href="https://learn.microsoft.com/en-us/dotnet/api/DocumentFormat.OpenXml.Wordprocessing.TextEffect" /></para>
+	/// </summary>
 	public static Run TextEffect(this Run run, TextEffectValues? effect)
 	{
 		run.GetOrInit<RunProperties>().SetValOrRemove<TextEffect>(effect);
 		return run;
 	}
 
-	/// <inheritdoc cref="EmphasisMarkValue" />
+	/// <summary>
+	/// Specifies the emphasis mark which shall be displayed for each
+	/// non-space character in this run.
+	/// <para>Setting this to <see langword="null" /> will remove the property node from the document.</para>
+	/// <para><see href="https://learn.microsoft.com/en-us/dotnet/api/DocumentFormat.OpenXml.Wordprocessing.Emphasis" /></para>
+	/// </summary>
 	public static Run EmphasisMark(this Run run, EmphasisMarkValues? emphasis)
 	{
 		run.GetOrInit<RunProperties>().SetValOrRemove<Emphasis>(emphasis);
 		return run;
 	}
 
-	/// <inheritdoc cref="EmbossValue" />
+	/// <summary>
+	/// Specifies that the contents of this run should be displayed as if embossed,
+	/// which makes text appear as if it is raised off the page in relief.
+	/// <para>Setting this to <see langword="null" /> will remove the property node from the document.</para>
+	/// <para><see href="https://learn.microsoft.com/en-us/dotnet/api/DocumentFormat.OpenXml.Wordprocessing.Emboss" /></para>
+	/// </summary>
 	public static Run Emboss(this Run run, bool? value = true)
 	{
 		run.GetOrInit<RunProperties>().SetValOrRemove<Emboss>(value);
 		return run;
 	}
 
-	/// <inheritdoc cref="GetFitText" />
+	/// <summary>
+	/// Specifies that the contents of this run shall not be automatically displayed based
+	/// on the width of its contents, rather its contents shall be resized
+	/// to fit the width specified.
+	/// <para>Setting this to <see langword="null" /> will remove the property node from the document.</para>
+	/// <para><see href="https://learn.microsoft.com/en-us/dotnet/api/DocumentFormat.OpenXml.Wordprocessing.FitText" /></para>
+	/// </summary>
 	public static Run FitText(this Run run, FitText? fitText)
 	{
 		run.GetOrInit<RunProperties>().SetPropertyClassOrRemove(fitText);
 		return run;
 	}
 
-	/// <inheritdoc cref="HighlightColorValue" />
+	/// <summary>
+	/// Specifies a highlighting color which is applied as
+	/// a background behind the contents of this run.
+	/// <para>Setting this to <see langword="null" /> will remove the property node from the document.</para>
+	/// <para><see href="https://learn.microsoft.com/en-us/dotnet/api/DocumentFormat.OpenXml.Wordprocessing.Highlight" /></para>
+	/// </summary>
 	public static Run HighlightColor(this Run run, HighlightColorValues? color)
 	{
 		run.GetOrInit<RunProperties>().SetValOrRemove<Highlight>(color);
 		return run;
 	}
 
-	/// <inheritdoc cref="ItalicValue" />
+	/// <summary>
+	/// Specifies whether the italic property should be applied to all non-complex
+	/// script characters in the contents of this run when displayed in a document.
+	/// <para>Setting this to <see langword="null" /> will remove the property node from the document.</para>
+	/// <para><see href="https://learn.microsoft.com/en-us/dotnet/api/DocumentFormat.OpenXml.Wordprocessing.Italic" /></para>
+	/// </summary>
 	public static Run Italic(this Run run, bool? value = true)
 	{
 		run.GetOrInit<RunProperties>().SetValOrRemove<Italic>(value);
 		return run;
 	}
 
-	/// <inheritdoc cref="ItalicComplexScriptValue" />
+	/// <summary>
+	/// Specifies whether the italic property should be applied to all complex
+	/// script characters in the contents of this run when displayed in a document.
+	/// <para>Setting this to <see langword="null" /> will remove the property node from the document.</para>
+	/// <para><see href="https://learn.microsoft.com/en-us/dotnet/api/DocumentFormat.OpenXml.Wordprocessing.ItalicComplexScript" /></para>
+	/// </summary>
 	public static Run ItalicComplexScript(this Run run, bool? value = true)
 	{
 		run.GetOrInit<RunProperties>().SetValOrRemove<ItalicComplexScript>(value);
 		return run;
 	}
 
-	/// <inheritdoc cref="ImprintValue" />
+	/// <summary>
+	/// Specifies that the contents of this run should be displayed as if imprinted,
+	/// which makes text appear to be imprinted or pressed into page
+	/// (also referred to as 'engrave').
+	/// <para>Setting this to <see langword="null" /> will remove the property node from the document.</para>
+	/// <para><see href="https://learn.microsoft.com/en-us/dotnet/api/DocumentFormat.OpenXml.Wordprocessing.Imprint" /></para>
+	/// </summary>
 	public static Run Imprint(this Run run, bool? value = true)
 	{
 		run.GetOrInit<RunProperties>().SetValOrRemove<Imprint>(value);
 		return run;
 	}
 
-	/// <inheritdoc cref="KerningValue" />
+	/// <summary>
+	/// Specifies whether font kerning shall be applied to the contents of this run.
+	/// <para>Setting this to <see langword="null" /> will remove the property node from the document.</para>
+	/// <para><see href="https://learn.microsoft.com/en-us/dotnet/api/DocumentFormat.OpenXml.Wordprocessing.Kern" /></para>
+	/// </summary>
 	public static Run Kerning(this Run run, double? size, TextMeasuringUnits units = TextMeasuringUnits.Points)
 	{
 		run.GetOrInit<RunProperties>().SetValOrRemove<Kern>(
@@ -462,35 +588,61 @@ public static class RunExtensions
 		return run;
 	}
 
-	/// <inheritdoc cref="GetLanguages" />
+	/// <summary>
+	/// Specifies the languages which shall be used to check
+	/// spelling and grammar (if requested) when processing the contents of this run.
+	/// <para>Setting this to <see langword="null" /> will remove the property node from the document.</para>
+	/// <para><see href="https://learn.microsoft.com/en-us/dotnet/api/DocumentFormat.OpenXml.Wordprocessing.Languages" /></para>
+	/// </summary>
 	public static Run Languages(this Run run, Languages? languages)
 	{
 		run.GetOrInit<RunProperties>().SetPropertyClassOrRemove(languages);
 		return run;
 	}
 
-	/// <inheritdoc cref="NoProofingValue" />
+	/// <summary>
+	/// Specifies that the contents of this run shall not report
+	/// any errors when the document is scanned for spelling and grammar.
+	/// <para>Setting this to <see langword="null" /> will remove the property node from the document.</para>
+	/// <para><see href="https://learn.microsoft.com/en-us/dotnet/api/DocumentFormat.OpenXml.Wordprocessing.NoProof" /></para>
+	/// </summary>
 	public static Run NoProofing(this Run run, bool? value = true)
 	{
 		run.GetOrInit<RunProperties>().SetValOrRemove<NoProof>(value);
 		return run;
 	}
 
-	/// <inheritdoc cref="OfficeMathValue" />
+	/// <summary>
+	/// Specifies that this run contains WordprocessingML which shall
+	/// be handled as though it was Office Open XML Math.
+	/// <para>Setting this to <see langword="null" /> will remove the property node from the document.</para>
+	/// <para><see href="https://learn.microsoft.com/en-us/dotnet/api/DocumentFormat.OpenXml.Wordprocessing.OfficeMath" /></para>
+	/// </summary>
 	public static Run OfficeMath(this Run run, bool? value = true)
 	{
 		run.GetOrInit<RunProperties>().SetValOrRemove<OfficeMath>(value);
 		return run;
 	}
 
-	/// <inheritdoc cref="OutlineValue" />
+	/// <summary>
+	/// Specifies that the contents of this run should be displayed as if they have
+	/// an outline, by drawing a one pixel wide border around the inside and outside
+	/// borders of each character glyph in the run.
+	/// <para>Setting this to <see langword="null" /> will remove the property node from the document.</para>
+	/// <para><see href="https://learn.microsoft.com/en-us/dotnet/api/DocumentFormat.OpenXml.Wordprocessing.Outline" /></para>
+	/// </summary>
 	public static Run Outline(this Run run, bool? value = true)
 	{
 		run.GetOrInit<RunProperties>().SetValOrRemove<Outline>(value);
 		return run;
 	}
 
-	/// <inheritdoc cref="VerticalPositionValue" />
+	/// <summary>
+	/// Specifies the amount by which text shall be raised or lowered for this run in relation
+	/// to the default baseline of the surrounding non-positioned text.
+	/// <para>Setting this to <see langword="null" /> will remove the property node from the document.</para>
+	/// <para><see href="https://learn.microsoft.com/en-us/dotnet/api/DocumentFormat.OpenXml.Wordprocessing.Position" /></para>
+	/// </summary>
 	public static Run VerticalPosition(this Run run, double? shift, TextMeasuringUnits units = TextMeasuringUnits.Points)
 	{
 		run.GetOrInit<RunProperties>().SetValOrRemove<Position>(
@@ -499,56 +651,95 @@ public static class RunExtensions
 		return run;
 	}
 
-	/// <inheritdoc cref="GetFonts" />
+	/// <summary>
+	/// Specifies the fonts which shall be used to display the text contents of this run.
+	/// <para>Setting this to <see langword="null" /> will remove the property node from the document.</para>
+	/// <para><see href="https://learn.microsoft.com/en-us/dotnet/api/DocumentFormat.OpenXml.Wordprocessing.RunFonts" /></para>
+	/// </summary>
 	public static Run Fonts(this Run run, RunFonts? fonts)
 	{
 		run.GetOrInit<RunProperties>().SetPropertyClassOrRemove(fonts);
 		return run;
 	}
 
-	/// <inheritdoc cref="StyleValue" />
+	/// <summary>
+	/// Specifies the style ID of the character style which shall be used to
+	/// format the contents of this paragraph.
+	/// <para>Setting this to <see langword="null" /> will remove the property node from the document.</para>
+	/// <para><see href="https://learn.microsoft.com/en-us/dotnet/api/DocumentFormat.OpenXml.Wordprocessing.RunStyle" /></para>
+	/// </summary>
 	public static Run Style(this Run run, string? styleId)
 	{
 		run.GetOrInit<RunProperties>().SetValOrRemove<RunStyle>(styleId);
 		return run;
 	}
 
-	/// <inheritdoc cref="RightToLeftValue" />
+	/// <summary>
+	/// Specifies whether the contents of this run shall have right-to-left characteristics.
+	/// <para>Setting this to <see langword="null" /> will remove the property node from the document.</para>
+	/// <para><see href="https://learn.microsoft.com/en-us/dotnet/api/DocumentFormat.OpenXml.Wordprocessing.RightToLeftText" /></para>
+	/// </summary>
 	public static Run RightToLeft(this Run run, bool? value = true)
 	{
 		run.GetOrInit<RunProperties>().SetValOrRemove<RightToLeftText>(value);
 		return run;
 	}
 
-	/// <inheritdoc cref="ShadowValue" />
+	/// <summary>
+	/// Specifies that the contents of this run shall be displayed as if
+	/// each character has a shadow.
+	/// <para>Setting this to <see langword="null" /> will remove the property node from the document.</para>
+	/// <para><see href="https://learn.microsoft.com/en-us/dotnet/api/DocumentFormat.OpenXml.Wordprocessing.Shadow" /></para>
+	/// </summary>
 	public static Run Shadow(this Run run, bool? value = true)
 	{
 		run.GetOrInit<RunProperties>().SetValOrRemove<Shadow>(value);
 		return run;
 	}
 
-	/// <inheritdoc cref="GetShading" />
+	/// <summary>
+	/// Specifies the shading applied to the contents of the run.
+	/// <para>Setting this to <see langword="null" /> will remove the property node from the document.</para>
+	/// <para><see href="https://learn.microsoft.com/en-us/dotnet/api/DocumentFormat.OpenXml.Wordprocessing.Shading" /></para>
+	/// </summary>
 	public static Run Shading(this Run run, Shading? shading)
 	{
 		run.GetOrInit<RunProperties>().SetPropertyClassOrRemove(shading);
 		return run;
 	}
 
-	/// <inheritdoc cref="SmallCapsValue" />
+	/// <summary>
+	/// Specifies that all small letter characters in this text run shall be formatted for display only
+	/// as their capital letter character equivalents in a font size two points smaller than the actual
+	/// font size specified for this text.
+	/// <para>Setting this to <see langword="null" /> will remove the property node from the document.</para>
+	/// <para><see href="https://learn.microsoft.com/en-us/dotnet/api/DocumentFormat.OpenXml.Wordprocessing.SmallCaps" /></para>
+	/// </summary>
 	public static Run SmallCaps(this Run run, bool? value = true)
 	{
 		run.GetOrInit<RunProperties>().SetValOrRemove<SmallCaps>(value);
 		return run;
 	}
 
-	/// <inheritdoc cref="SnapToGridValue" />
+	/// <summary>
+	/// Specifies whether the current paragraph should use the document grid lines per
+	/// page settings defined in the docGrid element (§17.6.5) when laying out
+	/// the contents in the paragraph.
+	/// <para>Setting this to <see langword="null" /> will remove the property node from the document.</para>
+	/// <para><see href="https://learn.microsoft.com/en-us/dotnet/api/DocumentFormat.OpenXml.Wordprocessing.SnapToGrid" /></para>
+	/// </summary>
 	public static Run SnapToGrid(this Run run, bool? value = true)
 	{
 		run.GetOrInit<RunProperties>().SetValOrRemove<SnapToGrid>(value);
 		return run;
 	}
 
-	/// <inheritdoc cref="CharacterSpacingValue" />
+	/// <summary>
+	/// Specifies the amount of character pitch which shall be added or removed after
+	/// each character in this run before the following character is rendered in the document.
+	/// <para>Setting this to <see langword="null" /> will remove the property node from the document.</para>
+	/// <para><see href="https://learn.microsoft.com/en-us/dotnet/api/DocumentFormat.OpenXml.Wordprocessing.Spacing" /></para>
+	/// </summary>
 	public static Run CharacterSpacing(this Run run, double? size, MeasuringUnits units = MeasuringUnits.Points)
 	{
 		run.GetOrInit<RunProperties>().SetValOrRemove<Spacing>(
@@ -557,21 +748,36 @@ public static class RunExtensions
 		return run;
 	}
 
-	/// <inheritdoc cref="SpecVanishValue" />
+	/// <summary>
+	/// Specifies that the given run shall always behave as if it is hidden,
+	/// even when hidden text is being displayed in the current document.
+	/// <para>Setting this to <see langword="null" /> will remove the property node from the document.</para>
+	/// <para><see href="https://learn.microsoft.com/en-us/dotnet/api/DocumentFormat.OpenXml.Wordprocessing.SpecVanish" /></para>
+	/// </summary>
 	public static Run SpecVanish(this Run run, bool? value = true)
 	{
 		run.GetOrInit<RunProperties>().SetValOrRemove<SpecVanish>(value);
 		return run;
 	}
 
-	/// <inheritdoc cref="StrikeValue" />
+	/// <summary>
+	/// Specifies that the contents of this run shall be displayed
+	/// with a single horizontal line through the center of the line.
+	/// <para>Setting this to <see langword="null" /> will remove the property node from the document.</para>
+	/// <para><see href="https://learn.microsoft.com/en-us/dotnet/api/DocumentFormat.OpenXml.Wordprocessing.Strike" /></para>
+	/// </summary>
 	public static Run Strike(this Run run, bool? value = true)
 	{
 		run.GetOrInit<RunProperties>().SetValOrRemove<Strike>(value);
 		return run;
 	}
 
-	/// <inheritdoc cref="FontSizeValue" />
+	/// <summary>
+	/// Specifies the font size which shall be applied to all non complex
+	/// script characters in the contents of this run when displayed.
+	/// <para>Setting this to <see langword="null" /> will remove the property node from the document.</para>
+	/// <para><see href="https://learn.microsoft.com/en-us/dotnet/api/DocumentFormat.OpenXml.Wordprocessing.FontSize" /></para>
+	/// </summary>
 	public static Run FontSize(this Run run, double? size, TextMeasuringUnits units = TextMeasuringUnits.Points)
 	{
 		run.GetOrInit<RunProperties>().SetValOrRemove<FontSize>(
@@ -580,7 +786,12 @@ public static class RunExtensions
 		return run;
 	}
 
-	/// <inheritdoc cref="ComplexScriptFontSizeValue" />
+	/// <summary>
+	/// Specifies the font size which shall be applied to all complex
+	/// script characters in the contents of this run when displayed.
+	/// <para>Setting this to <see langword="null" /> will remove the property node from the document.</para>
+	/// <para><see href="https://learn.microsoft.com/en-us/dotnet/api/DocumentFormat.OpenXml.Wordprocessing.FontSizeComplexScript" /></para>
+	/// </summary>
 	public static Run ComplexScriptFontSize(this Run run, double? size, TextMeasuringUnits units = TextMeasuringUnits.Points)
 	{
 		run.GetOrInit<RunProperties>().SetValOrRemove<FontSizeComplexScript>(
@@ -589,35 +800,61 @@ public static class RunExtensions
 		return run;
 	}
 
-	/// <inheritdoc cref="GetUnderline" />
+	/// <summary>
+	/// Specifies that the contents of this run should be displayed along with
+	/// an underline appearing directly below the character height
+	/// (less all spacing above and below the characters on the line).
+	/// <para>Setting this to <see langword="null" /> will remove the property node from the document.</para>
+	/// <para><see href="https://learn.microsoft.com/en-us/dotnet/api/DocumentFormat.OpenXml.Wordprocessing.Underline" /></para>
+	/// </summary>
 	public static Run Underline(this Run run, Underline? underline)
 	{
 		run.GetOrInit<RunProperties>().SetPropertyClassOrRemove(underline);
 		return run;
 	}
 
-	/// <inheritdoc cref="HiddenValue" />
+	/// <summary>
+	/// Specifies whether the contents of this run shall be hidden from
+	/// display at display time in a document.
+	/// <para>Setting this to <see langword="null" /> will remove the property node from the document.</para>
+	/// <para><see href="https://learn.microsoft.com/en-us/dotnet/api/DocumentFormat.OpenXml.Wordprocessing.Vanish" /></para>
+	/// </summary>
 	public static Run Hidden(this Run run, bool? value = true)
 	{
 		run.GetOrInit<RunProperties>().SetValOrRemove<Vanish>(value);
 		return run;
 	}
 
-	/// <inheritdoc cref="VerticalAlignmentValue" />
+	/// <summary>
+	/// Specifies the alignment which shall be applied to the contents of this run in relation
+	/// to the default appearance of the run's text.
+	/// <para>Setting this to <see langword="null" /> will remove the property node from the document.</para>
+	/// <para><see href="https://learn.microsoft.com/en-us/dotnet/api/DocumentFormat.OpenXml.Wordprocessing.VerticalTextAlignment" /></para>
+	/// </summary>
 	public static Run VerticalAlignment(this Run run, VerticalPositionValues? position)
 	{
 		run.GetOrInit<RunProperties>().SetValOrRemove<VerticalTextAlignment>(position);
 		return run;
 	}
 
-	/// <inheritdoc cref="CharacterScaleValue" />
+	/// <summary>
+	/// Specifies the amount by which each character shall be stretched or compressed.
+	/// <para>Setting this to <see langword="null" /> will remove the property node from the document.</para>
+	/// <para><see href="https://learn.microsoft.com/en-us/dotnet/api/DocumentFormat.OpenXml.Wordprocessing.CharacterScale" /></para>
+	/// </summary>
 	public static Run CharacterScale(this Run run, long? percentage)
 	{
 		run.GetOrInit<RunProperties>().SetValOrRemove<CharacterScale>(percentage);
 		return run;
 	}
 
-	/// <inheritdoc cref="WebHiddenValue" />
+	/// <summary>
+	/// Specifies whether the contents of this run shall be hidden from
+	/// display at display time in a document when the document is being
+	/// displayed in a web page view.
+	/// <para>Setting this to <see langword="null" /> will remove the property node from the document.</para>
+	/// <para><see href="https://learn.microsoft.com/en-us/dotnet/api/DocumentFormat.OpenXml.Wordprocessing.WebHidden" /></para>
+	/// </summary>
 	public static Run WebHidden(this Run run, bool? value = true)
 	{
 		run.GetOrInit<RunProperties>().SetValOrRemove<WebHidden>(value);

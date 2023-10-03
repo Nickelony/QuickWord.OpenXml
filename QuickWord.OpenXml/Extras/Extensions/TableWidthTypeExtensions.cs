@@ -3,6 +3,9 @@ using System;
 
 namespace QuickWord.OpenXml.Extras;
 
+/// <summary>
+/// A set of extension methods for the <see cref="TableWidthType"/> class.
+/// </summary>
 public static class TableWidthTypeExtensions
 {
 	public static double GetExactWidth(this TableWidthType tableWidth, out WidthUnits? units)

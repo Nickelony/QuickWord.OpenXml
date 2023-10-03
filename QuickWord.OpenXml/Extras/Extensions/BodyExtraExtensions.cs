@@ -6,6 +6,9 @@ using System.Linq;
 
 namespace QuickWord.OpenXml.Extras.Extensions;
 
+/// <summary>
+/// Additional extension methods for the <see cref="Body"/> class.
+/// </summary>
 public static class BodyExtraExtensions
 {
 	public static IEnumerable<Paragraph> Paragraphs(this Body body)

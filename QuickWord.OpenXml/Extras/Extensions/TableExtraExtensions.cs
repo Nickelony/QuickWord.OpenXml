@@ -6,6 +6,9 @@ using System.Linq;
 
 namespace QuickWord.OpenXml.Extras;
 
+/// <summary>
+/// Additional extension methods for the <see cref="Table"/> class.
+/// </summary>
 public static class TableExtraExtensions
 {
 	public static IEnumerable<TableRow> Rows(this Table table)

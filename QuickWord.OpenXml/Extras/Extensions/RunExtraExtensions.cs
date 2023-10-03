@@ -8,6 +8,9 @@ using System.Text;
 
 namespace QuickWord.OpenXml.Extras;
 
+/// <summary>
+/// Additional extension methods for the <see cref="Run"/> class.
+/// </summary>
 public static class RunExtraExtensions
 {
 	#region Formatting

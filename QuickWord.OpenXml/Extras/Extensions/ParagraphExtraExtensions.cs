@@ -7,6 +7,9 @@ using System.Text;
 
 namespace QuickWord.OpenXml.Extras;
 
+/// <summary>
+/// Additional extension methods for the <see cref="Paragraph"/> class.
+/// </summary>
 public static class ParagraphExtraExtensions
 {
 	public static IEnumerable<Run> Runs(this Paragraph paragraph)

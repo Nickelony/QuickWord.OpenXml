@@ -1,5 +1,8 @@
 ﻿namespace QuickWord.OpenXml;
 
+/// <summary>
+/// Outline level values for headings.
+/// </summary>
 public enum OutlineLevelValues
 {
 	Level1 = 0,
