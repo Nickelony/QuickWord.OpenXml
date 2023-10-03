@@ -8,11 +8,11 @@
 	  <Title>QuickWord Extensions for DocumentFormat.OpenXml</Title>
 	  <Authors>Kewin Kupilas</Authors>
 	  <Description>A set of extension methods for DocumentFormat.OpenXml which simplifies creating and modifying Word documents (such as .docx).</Description>
-	  <PackageLicenseExpression> GPL-3.0-or-later</PackageLicenseExpression>
+	  <PackageLicenseExpression>MIT</PackageLicenseExpression>
 	  <PackageProjectUrl>https://github.com/Nickelony/QuickWord.OpenXml</PackageProjectUrl>
 	  <RepositoryUrl>https://github.com/Nickelony/QuickWord.OpenXml</RepositoryUrl>
 	  <PackageTags>quick word office open xml docx simple easy</PackageTags>
-	  <Version>1.0.2</Version>
+	  <Version>1.0.3</Version>
 	  <PackageIcon>Icon128x128.png</PackageIcon>
 	  <GenerateDocumentationFile>True</GenerateDocumentationFile>
   </PropertyGroup>
