@@ -2,7 +2,7 @@
 A set of extension methods for `DocumentFormat.OpenXml` which simplifies creating and modifying Word documents (such as .docx).
 You can use these methods with your existing `DocumentFormat.OpenXml` code without having to change anything.
 
-# Features
+# Highlighted Features
 - Super quick and easy Builder-like pattern:
 ```cs
 var run = new Run().Text("This is a simple Run.")
@@ -27,18 +27,6 @@ Example with 5 runs:
 
 ![image](https://github.com/Nickelony/QuickWord.OpenXml/assets/20436882/85ddb350-834f-41d2-b2a8-e46e54bbe42f)
 
----
-- The ability to create sections:
-```cs
-// Start a new section
-body.AppendChild(QParagraph.Create(text,
-	new ParagraphFormatting
-	{
-		OutlineLevel = OutlineLevelValues.Level1, // Section level 1
-		Justification = JustificationValues.Center
-	},
-	new RunFormatting { FontSize = 16 }));
-```
 ---
 - The ability to create tables quickly:
 ```cs
