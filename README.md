@@ -2,6 +2,8 @@
 A set of extension methods for `DocumentFormat.OpenXml` which simplifies creating and modifying Word documents (such as .docx).
 You can use these methods with your existing `DocumentFormat.OpenXml` code without having to change anything.
 
+<a href="https://www.buymeacoffee.com/Nickelony"><img src="https://img.buymeacoffee.com/button-api/?text=Support Me&emoji=❤️&slug=Nickelony&button_colour=FFDD00&font_colour=000000&font_family=Lato&outline_colour=000000&coffee_colour=ffffff" /></a>
+
 # Getting Started
 Example document creation with 1 formatted paragraph:
 ```cs
