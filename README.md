@@ -1,5 +1,5 @@
 # ![Icon32x32](https://github.com/Nickelony/QuickWord.OpenXml/assets/20436882/9fb9f9c8-dc60-46dc-9d04-68a9ff60146f) QuickWord for DocumentFormat.OpenXml
-A set of extension methods for `DocumentFormat.OpenXml` which simplifies creating and modifying Word documents (such as .docx).
+An open-source set of extension methods for `DocumentFormat.OpenXml` which simplifies creating and modifying Word documents (such as .docx).
 You can use these methods with your existing `DocumentFormat.OpenXml` code without having to change anything.
 
 If you think something very important is missing in this library, please create an [Issue](https://github.com/Nickelony/QuickWord.OpenXml/issues) for it. I'm willing to implement anything that is crucial.
