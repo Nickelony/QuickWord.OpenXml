@@ -3,7 +3,7 @@ An open-source set of extension methods for `DocumentFormat.OpenXml` which simpl
 You can use these methods with your existing `DocumentFormat.OpenXml` code without having to change anything.
 
 If you think something very important is missing in this library, please create an [Issue](https://github.com/Nickelony/QuickWord.OpenXml/issues) for it. I'm willing to implement anything that is crucial.
-Contriobutions via **Pull Requests** are always welcome! :)
+Contributions via **Pull Requests** are always welcome! :)
 
 If you have any questions, feel free to open a [Discussion](https://github.com/Nickelony/QuickWord.OpenXml/discussions).
 
