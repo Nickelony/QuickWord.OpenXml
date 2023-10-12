@@ -2,7 +2,16 @@
 A set of extension methods for `DocumentFormat.OpenXml` which simplifies creating and modifying Word documents (such as .docx).
 You can use these methods with your existing `DocumentFormat.OpenXml` code without having to change anything.
 
+If you think something very important is missing in this library, please create an [Issue](https://github.com/Nickelony/QuickWord.OpenXml/issues) for it. I'm willing to implement anything that is crucial.
+Contriobutions via **Pull Requests** are always welcome! :)
+
+If you have any questions, feel free to open a [Discussion](https://github.com/Nickelony/QuickWord.OpenXml/discussions).
+
+Please remember that I may not always be able to push updates because of lack of time. If you wish to support me, you can buy me a coffee:
+
 <a href="https://www.buymeacoffee.com/Nickelony"><img src="https://img.buymeacoffee.com/button-api/?text=Support Me&emoji=❤️&slug=Nickelony&button_colour=FFDD00&font_colour=000000&font_family=Lato&outline_colour=000000&coffee_colour=ffffff" /></a>
+
+Thank you! ❤️
 
 # Getting Started
 Example document creation with 1 formatted paragraph:
